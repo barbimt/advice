@@ -21,7 +21,9 @@ function Advice (props: Props) {
     return (
         <>
         <div className='rounded-lg flex-col flex justify-center items-center place-self-center mx-auto border-double border-4 border-[#FFB8CB] p-4 shadow-2xl'>
-            <h2 className='text-white italic font-medium mb-2 '>Advice #{props.id.toString().padStart(3,"0")}</h2>
+            {
+                props.id === 0 ? <h1  className='text-white italic font-medium mb-2 '>Click to start</h1> :    <h2 className='text-white italic font-medium mb-2 '>Advice #{props.id.toString().padStart(3,"0")}</h2>         }
+            
             <h3 className='text-pink-50'>{props.text}</h3>
             <button  className="text-white bg-pink-500 hover:bg-pink-700  font-bold py-2 px-4 rounded mt-4" onClick={()=> {
                 props.setAdvice();

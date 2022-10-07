@@ -1,5 +1,4 @@
 
-
 const initialState = {
     id: 0,
     text: "",
